@@ -1,0 +1,163 @@
+export const portfolioData = {
+  hero: {
+    name: "Pranshu Singla",
+    roles: ["Software Engineer", "AI Engineer", "Backend Developer"],
+    description: "I build scalable backend systems, AI-powered applications and modern web platforms.",
+    resumeLink: "/assets/resume/pranshu-singla-resume.pdf", // Users can drop their resume here
+    email: "pranshusingla662@gmail.com",
+    github: "https://github.com/PranshuSinglaNITD",
+    linkedin: "https://www.linkedin.com/in/pranshu-singla-2542a8343/",
+  },
+  about: {
+    description: "I am a passionate Software Engineer and AI enthusiast dedicated to bridging the gap between cutting-edge artificial intelligence and scalable backend infrastructure. My journey began with competitive programming, which instilled a deep appreciation for algorithmic efficiency and robust system design. Today, I architect full-stack platforms that leverage Large Language Models, optimize computer vision pipelines, and deploy highly available microservices. I thrive in environments where complex problems meet innovative technology, constantly pushing the boundaries of what's possible.",
+    image: "/assets/images/pranshu.jpg",
+    education: {
+      university: "National Institute of Technology, Delhi",
+      degree: "B.Tech, Computer Science & Engineering",
+      duration: "Aug 2024 – May 2028 (Expected)",
+      cgpa: "8.00"
+    },
+    interests: [
+      { name: "Backend Architecture", icon: "Code", desc: "Designing scalable microservices." },
+      { name: "Distributed Systems", icon: "Network", desc: "Building fault-tolerant systems." },
+      { name: "Machine Learning", icon: "BrainCircuit", desc: "Optimizing AI & vision pipelines." },
+      { name: "Generative AI", icon: "BrainCircuit", desc: "Integrating autonomous LLM agents." },
+    ]
+  },
+  skills: [
+    {
+      title: "Languages",
+      skills: ["C++", "Python", "TypeScript", "JavaScript", "SQL", "C"],
+    },
+    {
+      title: "AI / ML & GenAI",
+      skills: ["Generative AI", "LLMs", "LangChain", "LangGraph", "PyTorch", "TensorFlow", "YOLOv8", "OpenCV", "Scikit-Learn"],
+    },
+    {
+      title: "Frontend",
+      skills: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
+    },
+    {
+      title: "Backend",
+      skills: ["Node.js", "Express", "FastAPI", "REST API", "Clerk", "NextAuth"],
+    },
+    {
+      title: "Databases",
+      skills: ["MongoDB", "PostgreSQL", "Redis", "Prisma", "Mongoose"],
+    },
+    {
+      title: "Cloud & DevOps",
+      skills: ["Docker", "AWS", "GitHub Actions", "Vercel", "Render"],
+    },
+  ],
+  projects: [
+    {
+      slug: "protrack",
+      title: "ProTrack",
+      description: "Smart Classroom Project Management System with LLM-augmented evaluation and auto-generation capabilities.",
+      details: "Architected a full-stack academic platform managing the complete project lifecycle. Integrated Gemini API to build an AI Architect that auto-generates project structures and a Professor AI Chatbot. Implemented a 5-layer security architecture achieving sub-300ms P95 response times.",
+      tags: ["Next.js 14", "MongoDB", "Gemini API", "TypeScript", "NextAuth.js v5"],
+      gradient: "from-blue-600/20 to-purple-600/20",
+      image: "/assets/images/protrack.png", // Placeholder for actual image
+      links: { github: "https://github.com/PranshuSinglaNITD/protrack", live: "https://protrack-ten.vercel.app/" },
+      // Detail Page Content
+      overview: "ProTrack is a comprehensive academic platform built for NIT Delhi's CSE department to manage the complete project lifecycle from class creation to rubric-based evaluation.",
+      problem: "Academic project management was fragmented, with manual grading, inconsistent rubrics, and tedious group formation processes.",
+      architecture: "A 5-layer security architecture with Google OAuth 2.0, HTTP-only JWTs, RBAC middleware, and full OWASP Top-10 compliance.",
+      database: "MongoDB Atlas with optimized indexing for real-time collaboration and role-based data isolation.",
+      challenges: ["Achieving sub-300ms P95 response times under 100 concurrent users.", "Integrating LLM smoothly without breaking the UI flow."],
+      solutions: ["Implemented Redis caching and optimized MongoDB aggregation pipelines.", "Built asynchronous background job processing for Gemini API calls."],
+      performance: "Scored SUS 81.4 / 100 ('Excellent') in UAT. Zero high/critical vulnerabilities found in OWASP ZAP penetration testing.",
+      lessons: "Learned the importance of defensive programming and robust error handling when dealing with unpredictable LLM outputs.",
+    },
+    {
+      slug: "jobfinder",
+      title: "JobFinder",
+      description: "AI-Agentic Recruitment Platform that automates candidate matching and cover letter generation.",
+      details: "Built an autonomous AI platform that matches candidates to jobs. Engineered a fast two-pass candidate ranking system combining database search with Gemini AI to score resumes. Optimized speed using AWS SQS for secure background queues.",
+      tags: ["Next.js", "FastAPI", "LangGraph", "Gemini 1.5", "AWS SQS"],
+      gradient: "from-emerald-600/20 to-teal-600/20",
+      image: "/assets/images/jobfinder.png",
+      links: { github: "https://github.com/PranshuSinglaNITD/JobFinder", live: "https://job-finder-blush.vercel.app/" },
+      // Detail Page Content
+      overview: "An autonomous AI recruitment platform that automatically matches candidates to jobs, generates tailored cover letters, and submits applications seamlessly.",
+      problem: "Recruiters and candidates spend hundreds of hours manually filtering resumes and writing repetitive cover letters.",
+      architecture: "Microservices architecture with Next.js frontend and FastAPI backend orchestrating LangGraph agents via AWS SQS.",
+      database: "PostgreSQL for structured user data and pgvector for semantic resume search.",
+      challenges: ["LLM processing latency was too high for real-time candidate ranking."],
+      solutions: ["Engineered a fast, two-pass candidate ranking system combining database keyword search with Gemini AI to score and summarize only the top 50 resumes."],
+      performance: "Reduced AI response times by 80%. System remains fast and responsive under heavy load thanks to background queues.",
+      lessons: "Asynchronous task queues are critical for user experience when integrating complex AI workflows.",
+    },
+    {
+      slug: "radhainf",
+      title: "RadhaInf",
+      description: "Fog-Robust Vehicle Detection System leveraging YOLOv8 and custom dehazing pipelines.",
+      details: "Developed a fog-robust vehicle detection model using YOLOv8 with custom fog-aware augmentation (Albumentations) and image dehazing. Outperformed internal clear-image baseline by +34% mAP@0.5 in foggy conditions.",
+      tags: ["PyTorch", "YOLOv8", "OpenCV", "Flask", "Computer Vision"],
+      gradient: "from-orange-600/20 to-red-600/20",
+      image: "/assets/images/radhainf.png",
+      links: { github: "https://github.com/PranshuSinglaNITD/RadhaInf", live: "#" },
+      // Detail Page Content
+      overview: "A fog-robust vehicle detection model using YOLOv8 with custom fog-aware augmentation pipeline.",
+      problem: "Standard autonomous vehicle detection models fail drastically in hazy and foggy conditions common in northern India.",
+      architecture: "Unified inference pipeline supporting images, video files, webcam, and Android IP camera streams with real-time dehazing + detection.",
+      database: "Local file system for dataset storage and SQLite for logging detection metadata.",
+      challenges: ["Collecting and labeling sufficient data for foggy conditions was nearly impossible."],
+      solutions: ["Used Albumentations to create a custom fog-aware augmentation pipeline, synthesizing realistic fog on clear images for training."],
+      performance: "mAP@0.5 = 0.75 and mean recall 73% on an unseen foggy test set. Outperformed internal clear-image baseline by +34% mAP@0.5.",
+      lessons: "Data augmentation is often more powerful than architectural changes when dealing with specific domain shifts like weather.",
+    }
+  ],
+  timeline: [
+    {
+      year: "2025",
+      title: "Industrial Ideathon by DSIIDC",
+      subtitle: "Pre-Final Round Qualifier",
+      description: "Qualified for the Pre-Final Round among the top 100 teams out of 1,700+ teams across Delhi NCR.",
+      icon: "Trophy",
+      color: "text-yellow-500",
+      bg: "bg-yellow-500/10",
+    },
+    {
+      year: "2024",
+      title: "National Workshop at IIT Kanpur",
+      subtitle: "NIT Delhi Delegate",
+      description: "Selected as an official delegate from NIT Delhi to attend the prestigious national workshop.",
+      icon: "BookOpen",
+      color: "text-blue-500",
+      bg: "bg-blue-500/10",
+    },
+    {
+      year: "Research",
+      title: "Medical Imaging Optimization",
+      subtitle: "Breast-Ultrasound Segmentation",
+      description: "Improved segmentation accuracy on the BUSI dataset from 86% to 96% through hyperparameter tuning, reducing model error by 5%.",
+      icon: "Target",
+      color: "text-purple-500",
+      bg: "bg-purple-500/10",
+    },
+    {
+      year: "Certification",
+      title: "AWS Cloud Practitioner Essentials",
+      subtitle: "Forage",
+      description: "Completed comprehensive training on AWS cloud concepts, security, technology, and billing.",
+      icon: "Award",
+      color: "text-orange-500",
+      bg: "bg-orange-500/10",
+    },
+    {
+      year: "Leadership",
+      title: "Hackerrank Campus Ambassador",
+      subtitle: "NIT Delhi",
+      description: "Appointed to lead and foster the competitive programming community at NIT Delhi.",
+      icon: "Star",
+      color: "text-green-500",
+      bg: "bg-green-500/10",
+    }
+  ],
+  profiles: {
+    leetcode: { rating: 1684, problems: "300+", link: "https://leetcode.com/pranshusingla" },
+    codeforces: { rating: 1030, rank: "Newbie", link: "#" },
+  }
+}
