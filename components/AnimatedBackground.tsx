@@ -1,10 +1,12 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { motion } from "framer-motion"
+import { motion, useAnimation } from "framer-motion"
+import { useActiveProject } from "@/components/ActiveProjectProvider"
 
 export function AnimatedBackground() {
   const containerRef = useRef<HTMLDivElement>(null)
+  const { activeProjectSlug } = useActiveProject()
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -31,9 +33,36 @@ export function AnimatedBackground() {
       
       <div ref={containerRef} className="absolute inset-0 transition-transform duration-1000 ease-out">
         {/* Radial Gradient Orbs */}
-        <div className="absolute -top-[40%] -left-[10%] w-[70%] h-[70%] rounded-full bg-blue-900/20 blur-[120px] mix-blend-screen" />
-        <div className="absolute top-[20%] -right-[20%] w-[60%] h-[60%] rounded-full bg-purple-900/20 blur-[120px] mix-blend-screen" />
-        <div className="absolute -bottom-[30%] left-[20%] w-[80%] h-[80%] rounded-full bg-indigo-900/20 blur-[120px] mix-blend-screen" />
+        <motion.div 
+          animate={{
+            backgroundColor: 
+              activeProjectSlug === "jobfinder" ? "rgba(16, 185, 129, 0.2)" : // emerald
+              activeProjectSlug === "radhainf" ? "rgba(249, 115, 22, 0.2)" : // orange
+              "rgba(30, 58, 138, 0.2)" // blue
+          }}
+          transition={{ duration: 1 }}
+          className="absolute -top-[40%] -left-[10%] w-[70%] h-[70%] rounded-full blur-[120px] mix-blend-screen" 
+        />
+        <motion.div 
+          animate={{
+            backgroundColor: 
+              activeProjectSlug === "jobfinder" ? "rgba(20, 184, 166, 0.2)" : // teal
+              activeProjectSlug === "radhainf" ? "rgba(239, 68, 68, 0.2)" : // red
+              "rgba(88, 28, 135, 0.2)" // purple
+          }}
+          transition={{ duration: 1 }}
+          className="absolute top-[20%] -right-[20%] w-[60%] h-[60%] rounded-full blur-[120px] mix-blend-screen" 
+        />
+        <motion.div 
+          animate={{
+            backgroundColor: 
+              activeProjectSlug === "jobfinder" ? "rgba(6, 95, 70, 0.2)" : // dark emerald
+              activeProjectSlug === "radhainf" ? "rgba(153, 27, 27, 0.2)" : // dark red
+              "rgba(49, 46, 129, 0.2)" // indigo
+          }}
+          transition={{ duration: 1 }}
+          className="absolute -bottom-[30%] left-[20%] w-[80%] h-[80%] rounded-full blur-[120px] mix-blend-screen" 
+        />
       </div>
     </div>
   )

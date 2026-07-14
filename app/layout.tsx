@@ -7,6 +7,8 @@ import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { LenisProvider } from "@/components/LenisProvider";
 import { CustomCursor } from "@/components/CustomCursor";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ActiveProjectProvider } from "@/components/ActiveProjectProvider";
+import { CursorProvider } from "@/components/CursorProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,13 +34,17 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <CustomCursor />
-          <LenisProvider>
-            <AnimatedBackground />
-            <Navbar />
-            <main className="flex-1 relative z-10">{children}</main>
-            <Footer />
-          </LenisProvider>
+          <CursorProvider>
+            <CustomCursor />
+            <ActiveProjectProvider>
+              <LenisProvider>
+                <AnimatedBackground />
+                <Navbar />
+                <main className="flex-1 relative z-10">{children}</main>
+                <Footer />
+              </LenisProvider>
+            </ActiveProjectProvider>
+          </CursorProvider>
         </ThemeProvider>
       </body>
     </html>

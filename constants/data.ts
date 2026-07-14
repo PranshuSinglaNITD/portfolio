@@ -3,14 +3,13 @@ export const portfolioData = {
     name: "Pranshu Singla",
     roles: ["Software Engineer", "AI Engineer", "Backend Developer"],
     description: "I build scalable backend systems, AI-powered applications and modern web platforms.",
-    resumeLink: "/assets/resume/pranshu-singla-resume.pdf", // Users can drop their resume here
     email: "pranshusingla662@gmail.com",
     github: "https://github.com/PranshuSinglaNITD",
     linkedin: "https://www.linkedin.com/in/pranshu-singla-2542a8343/",
   },
   about: {
     description: "I am a passionate Software Engineer and AI enthusiast dedicated to bridging the gap between cutting-edge artificial intelligence and scalable backend infrastructure. My journey began with competitive programming, which instilled a deep appreciation for algorithmic efficiency and robust system design. Today, I architect full-stack platforms that leverage Large Language Models, optimize computer vision pipelines, and deploy highly available microservices. I thrive in environments where complex problems meet innovative technology, constantly pushing the boundaries of what's possible.",
-    image: "/assets/images/pranshu.jpg",
+    image: "/assets/images/pranshu.jpeg",
     education: {
       university: "National Institute of Technology, Delhi",
       degree: "B.Tech, Computer Science & Engineering",
@@ -49,6 +48,17 @@ export const portfolioData = {
       title: "Cloud & DevOps",
       skills: ["Docker", "AWS", "GitHub Actions", "Vercel", "Render"],
     },
+  ],
+  skillDistribution: [
+    { name: "Backend Development", level: 95 },
+    { name: "Machine Learning", level: 85 },
+    { name: "Deep Learning", level: 75 },
+    { name: "RAG Agents & LLMs", level: 85 },
+    { name: "DevOps (AWS and Docker)", level: 70 },
+    { name: "Distributed Systems", level: 75 },
+    { name: "Frontend Development", level: 80 },
+    { name: "System Design", level: 75 },
+    { name: "Data Structures & Algorithms", level: 95 },
   ],
   projects: [
     {
@@ -111,6 +121,15 @@ export const portfolioData = {
   ],
   timeline: [
     {
+      year: "2024",
+      title: "Amazon ML Summer School Mentee",
+      subtitle: "Top 3000 across India",
+      description: "Selected as a mentee for the Amazon ML Summer School, being part of the top 3000 students selected across India.",
+      icon: "Target",
+      color: "text-amber-500",
+      bg: "bg-amber-500/10",
+    },
+    {
       year: "2025",
       title: "Industrial Ideathon by DSIIDC",
       subtitle: "Pre-Final Round Qualifier",
@@ -157,7 +176,7 @@ export const portfolioData = {
     }
   ],
   profiles: {
-    leetcode: { rating: 1684, problems: "300+", link: "https://leetcode.com/pranshusingla" },
+    leetcode: { rating: 1712, problems: "400+", link: "https://leetcode.com/u/aZB1VytZJf" },
     codeforces: { rating: 1030, rank: "Newbie", link: "#" },
   }
 }

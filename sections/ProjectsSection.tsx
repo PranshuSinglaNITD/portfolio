@@ -7,10 +7,15 @@ import { Badge } from "../components/ui/badge"
 import { ExternalLink, ArrowRight } from "lucide-react"
 import { FaGithub } from "react-icons/fa"
 import { portfolioData } from "@/constants/data"
+import { useActiveProject } from "@/components/ActiveProjectProvider"
+import { useCursor } from "@/components/CursorProvider"
 import Link from "next/link"
 import Image from "next/image"
 
 export function ProjectsSection() {
+  const { setActiveProjectSlug } = useActiveProject()
+  const { setCursorText } = useCursor()
+  
   return (
     <section id="projects" className="py-24 px-6 relative z-10">
       <div className="container mx-auto">
@@ -35,6 +40,14 @@ export function ProjectsSection() {
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: false, amount: 0.1 }}
               transition={{ duration: 0.8, type: "spring", bounce: 0.4, delay: 0.1 }}
+              onMouseEnter={() => {
+                setActiveProjectSlug(project.slug)
+                setCursorText("View")
+              }}
+              onMouseLeave={() => {
+                setActiveProjectSlug(null)
+                setCursorText(null)
+              }}
             >
               <Link href={`/projects/${project.slug}`} className="block focus:outline-none">
                 <Card className="overflow-hidden border-border bg-card hover:bg-muted/50 transition-all group cursor-pointer">

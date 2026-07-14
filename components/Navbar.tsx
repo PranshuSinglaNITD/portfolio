@@ -5,6 +5,7 @@ import Link from "next/link"
 import { motion, useScroll, useSpring } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "./ThemeToggle"
+import { Magnetic } from "./Magnetic"
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -51,15 +52,20 @@ export function Navbar() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
             {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.name}
-              </Link>
+              <Magnetic key={link.name}>
+                <Link
+                  href={link.href}
+                  className="text-muted-foreground hover:text-foreground transition-colors py-2 px-1 block"
+                >
+                  {link.name}
+                </Link>
+              </Magnetic>
             ))}
-            <ThemeToggle />
+            <Magnetic>
+              <div className="py-2">
+                <ThemeToggle />
+              </div>
+            </Magnetic>
           </nav>
 
           {/* Mobile Toggle */}
