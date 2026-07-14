@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 
 const projects = [
@@ -77,7 +78,7 @@ export default function Projects() {
                                             <ExternalLink size={16} /> Live Demo
                                         </Link>
                                         <Link href={project.repoLink} className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
-                                            <Github size={16} /> Code
+                                            <FaGithub size={16} /> Code
                                         </Link>
                                     </div>
                                 </div>
