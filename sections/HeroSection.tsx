@@ -37,7 +37,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 pb-12 px-6">
+    <section className="min-h-[100dvh] flex items-center justify-center pt-24 md:pt-32 pb-12 px-4 md:px-6">
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <motion.div
@@ -80,17 +80,17 @@ export function HeroSection() {
                System Status: <span className="text-emerald-400">All Systems Operational</span>
             </div>
             
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap md:flex-nowrap items-center justify-between gap-y-6 gap-x-4">
               <div className="space-y-1">
                 <div className="text-2xl md:text-3xl font-bold tracking-tight text-foreground">{portfolioData.profiles.leetcode.problems}</div>
                 <div className="text-xs md:text-sm text-muted-foreground font-medium uppercase tracking-wider">Problems Solved</div>
               </div>
-              <div className="w-px h-12 bg-border" />
+              <div className="hidden md:block w-px h-12 bg-border" />
               <div className="space-y-1">
                 <div className="text-2xl md:text-3xl font-bold tracking-tight text-foreground">{portfolioData.profiles.leetcode.rating}</div>
                 <div className="text-xs md:text-sm text-muted-foreground font-medium uppercase tracking-wider">Contest Rating</div>
               </div>
-              <div className="w-px h-12 bg-border" />
+              <div className="hidden md:block w-px h-12 bg-border" />
               <div className="space-y-1">
                 <div className="text-2xl md:text-3xl font-bold tracking-tight text-foreground">&lt;300ms</div>
                 <div className="text-xs md:text-sm text-muted-foreground font-medium uppercase tracking-wider">API Latency</div>

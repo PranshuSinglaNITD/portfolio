@@ -33,7 +33,7 @@ const AnimatedCounter = ({ value }: { value: number }) => {
 
 export function SkillDistributionSection() {
   return (
-    <section id="skill-distribution" className="py-24 px-6 relative z-10">
+    <section id="skill-distribution" className="py-16 md:py-24 px-4 md:px-6 relative z-10">
       {/* Decorative background elements */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-blue-900/5 blur-[120px] rounded-full pointer-events-none -z-10" />
       

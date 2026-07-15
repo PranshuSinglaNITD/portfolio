@@ -16,7 +16,7 @@ const iconMap: Record<string, React.FC<any>> = {
 
 export function AboutSection() {
   return (
-    <section id="about" className={cn('py-24', 'px-6', 'relative', 'z-10')}>
+    <section id="about" className={cn('py-16 md:py-24', 'px-4 md:px-6', 'relative', 'z-10')}>
       <div className={cn('container', 'mx-auto')}>
         <motion.div
           initial={{ opacity: 0, y: 100 }}

@@ -6,7 +6,7 @@ import { portfolioData } from "@/constants/data"
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-24 px-6 relative z-10 bg-muted/30">
+    <section id="skills" className="py-16 md:py-24 px-4 md:px-6 relative z-10 bg-muted/30">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 150 }}

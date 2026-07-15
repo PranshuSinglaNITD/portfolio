@@ -176,7 +176,7 @@ export const portfolioData = {
     }
   ],
   profiles: {
-    leetcode: { rating: 1712, problems: "400+", link: "https://leetcode.com/u/aZB1VytZJf" },
+    leetcode: { rating: 1712, problems: "350+", link: "https://leetcode.com/u/aZB1VytZJf" },
     codeforces: { rating: 1030, rank: "Newbie", link: "#" },
   }
 }
